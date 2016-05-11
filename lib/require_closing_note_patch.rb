@@ -17,7 +17,8 @@ module RequireClosingNotePatch
       valid_save = before_save_without_note_required_on_close
       if require_note?
         # New records do _NOT_ have a notes field
-        if journals.last.notes.blank?
+        # if journals.last.notes.blank?
+        if @current_journal.notes.blank?
           errors.add_to_base("A note is required when closing an issue")
           valid_save = false
         end
