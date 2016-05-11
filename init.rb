@@ -1,5 +1,5 @@
 require 'redmine'
-require 'dispatcher'
+# require 'dispatcher'
 require_dependency 'require_closing_note_patch'
 
 Redmine::Plugin.register :redmine_require_closing_note do
