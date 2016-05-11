@@ -1,6 +1,9 @@
 require 'redmine'
 # require 'dispatcher'
-require_dependency 'require_closing_note_patch'
+
+Rails.configuration.to_prepare do
+  require_dependency 'require_closing_note_patch'
+end
 
 Redmine::Plugin.register :redmine_require_closing_note do
   name 'Redmine Require Closing Note plugin'
